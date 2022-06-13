@@ -1,29 +1,43 @@
 # TCP/IP 기말 과제 <미세먼지 알림이>
 
 
-<h2>01. 개요</h2>
+## 01. 개요
 
-<h3>01-1 목적</h3>
-미세먼지에 민감한 오늘날, 시도별로 실시간 미세먼지 측정정보를 쉽게 조회할 수 있도록 서비스를 제공하는 것이 해당 프로젝트의 목적이다.
-<div/><div/>
-<h3>01-2 기능</h3>
-시도별 실시간 측정정보 조회
+### 01-1 목적
+미세먼지에 민감한 오늘날, 시도별로 실시간 미세먼지 측정정보를 쉽게 조회할 수 있도록 서비스를 제공하는 것이 해당 프로젝트의 목적이다.  
+
+### 01-2 기능
+시도별 실시간 측정정보 조회  
 : 시도명을 검색조건으로 하여(시도명에 따른 번호 입력) 시도별 미세먼지 및 초미세먼지의 농도와 등급 정보 조회 기능을 제공
 
-<h3>01-3 개발환경</h3>
-개발언어: python
-개발환경: Visual Studio Code
+### 01-3 개발환경
+- 개발언어: python  
+- 개발환경: Visual Studio Code
 
-<h3>01-4 참고자료</h3>
-삼전동해커, 파이썬 thread 소켓 프로그래밍, https://watchout31337.tistory.com/117
-jvvp512, 파이썬 쓰레드(Thread) 알아보기-2: 뮤텍스(Lock), https://jvvp.tistory.com/1154
+### 01-4 참고자료
+- 삼전동해커, 파이썬 thread 소켓 프로그래밍, https://watchout31337.tistory.com/117  
+- jvvp512, 파이썬 쓰레드(Thread) 알아보기-2: 뮤텍스(Lock), https://jvvp.tistory.com/1154      
 
 
-<h2>02. 실행결과</h2>
 
-#서버 [server.py]
-<img width="" height="" src="./image/server_result.jpg"/>
-#클라이언트1 [client.py]
-<img width="" height="" src="./image/client_result1.jpg"/>
-#클라이언트2 [client.py]
-<img width="" height="" src="./image/client_result2.jpg"/>
+## 02. 실행결과
+
+### 02-1 실행 순서
+1. 서버는 클라이언트의 접속을 기다린다.
+2. 클라이언트가 접속하면 접속한 클라이언트의 정보가 서버 측에 출력된다.
+3. 클라이언트는 조회가 가능한 시도명을 확인하고 조회하고자 하는 곳의 번호를 입력한다.
+4. 서버는 클라이언트의 입력을 확인한다.
+5. 서버는 입력받은 번호에 해당하는 도시명을 이용해 api 호출 후 미세먼지/초미세먼지 정보를 가공 후 클라이언트에게 전달한다.
+6. 클라이언트는 제공받은 미세먼지/초미세먼지 정보를 확인한다.
+7. 클라이언트는 quit를 입력시 서버와의 연결을 종료하게 된다.
+8. 종료된 클라이언트의 정보는 서버 측에 출력된다.
+
+### 02-2 실행 결과
+##### 서버 [server.py]
+<img width="" height="" src="./image/server_result.jpg"/>  
+
+##### 클라이언트1 [client.py]
+<img width="" height="" src="./image/client_result1.jpg"/>  
+
+##### 클라이언트2 [client.py]
+<img width="" height="" src="./image/client_result2.jpg"/>  
